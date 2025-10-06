@@ -73,6 +73,11 @@
                     <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-colors">Услуги</a>
                     <a href="#executor" class="text-gray-700 hover:text-primary font-medium transition-colors">Для исполнителя</a>
                     <a href="#contacts" class="text-gray-700 hover:text-primary font-medium transition-colors">Контакты и документы</a>
+                    <!-- Кнопка "Войти" -->
+                    <label for="login-modal" class="ml-4 bg-teal-500 text-white px-4 py-2 rounded-xl hover:bg-teal-600 transition cursor-pointer">
+                        Войти
+                    </label>
+                </nav>
                 </nav>
                 
                 <!-- Мобильное меню -->
@@ -90,10 +95,36 @@
                     <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-colors">Услуги</a>
                     <a href="#executor" class="text-gray-700 hover:text-primary font-medium transition-colors">Для исполнителя</a>
                     <a href="#contacts" class="text-gray-700 hover:text-primary font-medium transition-colors">Контакты и документы</a>
+                    <!-- Кнопка "Войти" для мобильного -->
+                    <label for="login-modal" class="bg-teal-500 text-white px-4 py-2 rounded-xl hover:bg-teal-600 transition text-center cursor-pointer">
+                    Войти
+                    </label>
                 </nav>
             </div>
         </div>
     </header>
+
+    <!-- МОДАЛЬНОЕ ОКНО "ВОЙТИ" -->
+    <input type="checkbox" id="login-modal" class="hidden peer">
+
+    <!-- Затемнение -->
+    <label for="login-modal" class="fixed inset-0 bg-black/50 hidden peer-checked:block z-40 cursor-pointer transition-opacity"></label>
+
+    <!-- Окно входа -->
+    <div class="fixed inset-0 hidden peer-checked:flex items-center justify-center z-50">
+      <div class="bg-white rounded-2xl shadow-2xl p-6 w-80 text-center relative">
+        <h2 class="text-xl font-semibold mb-4">Выберите действие</h2>
+        <div class="space-y-3">
+          <a href="https://webapp.xn----ctbefqt5agebvc.xn--p1ai/signin" target="_blank" class="block w-full bg-teal-500 text-white py-2 rounded-xl hover:bg-teal-600 transition">
+            Хочу заказывать услуги
+          </a>
+          <a href="https://webapp.xn----ctbefqt5agebvc.xn--p1ai/executor/signin" target="_blank" class="block w-full bg-gray-100 text-gray-800 py-2 rounded-xl hover:bg-gray-200 transition">
+            Хочу выполнять заказы
+          </a>
+        </div>
+        <label for="login-modal" class="mt-4 block text-sm text-gray-500 hover:text-gray-700 cursor-pointer">Отмена</label>
+      </div>
+    </div>
 
     <main class="pt-16">
         <!-- Блок 1: О компании -->
@@ -126,10 +157,14 @@
                             </div>
                         </div>
                         
-                        <div class="flex justify-center">
-                        <a href="https://t.me/esu_client_bot" target="_blank" class="bg-primary text-white px-10 py-3 rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">
-                            Telegram-бот
+                        <div class="flex flex-col items-center gap-4">
+                        <a href="https://t.me/esu_client_bot" target="_blank" class="bg-primary text-white w-64 py-3 rounded-button font-medium hover:bg-blue-600 transition-colors text-center">
+                            Перейти в Telegram-бот
                         </a>
+                        <a href="https://webapp.xn----ctbefqt5agebvc.xn--p1ai/signin" target="_blank" class="bg-teal-500 text-white w-64 py-3 rounded-button font-medium hover:bg-teal-600 transition-colors text-center">
+                            Перейти на сайт
+                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -339,14 +374,17 @@
                         </div>
                     </div>
                 </div>
-                    <p class="text-sm text-gray-600 text-center flex items-center justify-center">
-                         ⚠️ <span class="ml-2 font-bold">Первые 3 месяца бесплатно,далее комиссия за выполненный заказ составляет 50 рублей и начисляется в сумме за все выполненные заказы 1 числа каждого месяца. Своевременная оплата обязательна для получения новых заказов. Неуплата приведет к приостановке предоставления заказов.</span>
-                    </p>
+                <p class="text-sm text-gray-600 text-center flex items-center justify-center">
+                    ⚠️ <span class="ml-2 font-bold">Первые 3 месяца бесплатно, далее комиссия за выполненный заказ составляет 50 рублей и начисляется в сумме за все выполненные заказы 1 числа каждого месяца. Своевременная оплата обязательна для получения новых заказов. Неуплата приведет к приостановке предоставления заказов.</span>
+                </p>
 
-                    <a href="https://t.me/esu_executor_bot" target="_blank" class="bg-primary text-white w-full px-10 py-3 rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap text-center block">
-                        Telegram-бот
+                <div class="flex flex-row justify-center gap-4 mt-4">
+                    <a href="https://t.me/esu_executor_bot" target="_blank" class="bg-primary text-white w-64 py-3 rounded-button font-medium hover:bg-blue-600 transition-colors text-center">
+                        Перейти в Telegram-бот
                     </a>
-
+                    <a href="https://webapp.xn----ctbefqt5agebvc.xn--p1ai/executor/signin" target="_blank" class="bg-teal-500 text-white w-64 py-3 rounded-button font-medium hover:bg-teal-600 transition-colors text-center">
+                        Перейти на сайт
+                    </a>
                 </div>
             </div>
         </section>
